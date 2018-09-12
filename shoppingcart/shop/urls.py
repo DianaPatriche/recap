@@ -7,5 +7,6 @@ from . import views
 app_name = 'shop'
 
 urlpatterns = [
-    path('admin/',admin.site.urls),
+    re_path('^$',views.product_list,name='product_list'),
+    url(r'produs/', views.product_detail, name='product_detail')
 ]

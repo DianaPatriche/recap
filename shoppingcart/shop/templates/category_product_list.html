@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Produsele din categoria selectata</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td width="300px" style="border: 0px">
+            {% for c in categorii %}
+                <a href="http://localhost:8000/shop/category/{{c.id}}/">{{c.name}}</a> </br>
+            {% endfor %}
+        </td>
+        <br/>
+        <td>
+            {% for p in produse %}
+                <a href="http://localhost:8000/shop/product/{{p.id}}/">{{p.name}}</a> </br>
+            {% endfor %}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+

@@ -10,13 +10,13 @@
     <tr>
         <td width="300px" style="border: 0px">
             {% for c in categorii %}
-                {{c.name}} </br>
+                <a href="http://localhost:8000/shop/category/{{c.id}}/">{{p.name}}</a> </br>
             {% endfor %}
         </td>
     <br/>
     <td>
         {% for p in produse %}
-            <a href="produs/?id={{p.id}}">{{p.name}}</a> </br>
+            <a href="http://localhost:8000/shop/product/{{p.id}}/">{{p.name}}</a> </br>
         {% endfor %}
     </td>
     </tr>
